@@ -138,7 +138,7 @@ def calculate_ma(df, type, ma_option):
       if(v == True):
          window_param = k.split('_')[1]
          if(type == 'MA'):
-            ma_result[k] = ta.ema(df['Close'], length = int(window_param))
+            ma_result[k] = ta.ma(df['Close'], length = int(window_param))
          elif (type == 'EMA'):
             ma_result[k] = ta.ema(df['Close'], length = int(window_param))
          else:
